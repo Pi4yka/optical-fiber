@@ -1,12 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <title>Document</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="logo">
+            <img src="res/logo.png" alt="optimont logo" />
+        </div>
+        <nav class="nav nav-menu">
+            <ul class="menu">
+                <li class="menu-element"><a href="">О нас</a></li>
+                <li class="menu-element"><a href="">Наша продукция</a></li>
+                <li class="menu-element"><a href="">Акции</a></li>
+                <li class="menu-element"><a href="">Как мы работаем</a></li>
+                <li class="menu-element"><a href="">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="greetings-block">
+            <h1 class="title">
+                Мы осуществляем монтаж <br />
+                по всей территории Москвы и Московской области
+            </h1>
+
+            <div class="cable-card">
+                <div class="cable-section">
+                    <img class="big-cable" src="res/cablepic.png" alt="cable picture" />
+                    <div class="cable-text-section">
+                        <div class="title-optical-fibre">
+                            <h1>Оптический кабель</h1>
+                            <img src="res/lines.png" alt="two lines" class="cable-section-lines" />
+                            <h4 class="additional-info-cable-section">
+                                закажите обратный звонок и один из<br />
+                                наших консультантов перезвонит вам
+                            </h4>
+                            <div class="cable-block-button">Заказать звонок</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us-block" >
+            <div class="about-menu">
+                <h1 class="about-us-caption">О нас</h1>
+                <ul class="about-us-menu">
+                    <li class="about-us-menu-element" onclick="about(this)">ФАКТЫ
+                        <img src="res/select.png" alt="" class="selection" id="selection1">
+                    </li>
+                    <li class="about-us-menu-element" onclick="about(this)">СЕРТИФИКАТЫ
+                        <img src="res/select.png" alt="" class="selection" id="selection2">
+                    </li>
+                </ul>
+            </div>
+            <div class = "about-us-facts" id = "facts">
+                <div class="info-container">
+                    <div class="info-block">
+                        <div class="left-block"><img src="res/logo.png" alt="optimont logo" /></div>
+                        <div class="right-block">
+                            <h1 class="info-block-title">
+                                ZASIP
+                            </h1>
+                            <h3 class="info-block-caption">
+                                На рынке уже много лет и знаем как правильно провести и настроить оптоволоконые кабеля
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="facts-title">Сотрудничая с Нами, вы получаете:</div>
+                <div class="facts">
+
+                    <div class="facts-element">
+                        <img src="res/100%.png" alt="image" />
+                        <div class="caption">
+                            <h2 class="fact-inside-title"><b>100%</b> обратной связи
+                            </h2>
+                            <h4 class="fact-inside-caption">Вы не будете тратить свое время пытаясь дозвониться до нас
+                            </h4>
+
+                        </div>
+                    </div>
+                    <div class="facts-element">
+                        <img src="res/hard.png" alt="image" />
+                        <div class="caption">
+                            <h2 class="fact-inside-title"><b>Решение</b> сложных задач</h2>
+                            <h4 class="fact-inside-caption">
+
+                                Своевременное оборудование и оперативное решение самых сложных
+                                задач
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="facts-element">
+                        <img src="res/time eco.png" alt="image" />
+                        <div class="caption">
+                            <h2 class="fact-inside-title"><b>Экономия</b> вашего времени</h2>
+                            <h4 class="fact-inside-caption">
+
+                                С нами вы экономите деньги и главное свое свободное время
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="facts-element">
+                        <img src="res/garant.png" alt="image" />
+                        <div class="caption">
+                            <h2 class="fact-inside-title"><b>Гарантия</b> качества работы</h2>
+                            <h4 class="fact-inside-caption">
+
+                                Предоставляем качество на все выполненные работы и соблюдение
+                                обязательств, взятых на себя компанией
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="facts-element">
+                        <img src="res/long time.png" alt="image" />
+                        <div class="caption">
+                            <h2 class="fact-inside-title">
+                                <b>Долгосрочное</b> сотрудничество
+                            </h2>
+                            <h4 class="fact-inside-caption">
+                                Долгосрочное сотрудничество и комплексный подход к своим
+                                потребностям
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "about-us-certificates" id = "certificates"></div>
+        </section>
+        <section class="price-list">
+            <nav class="price-menu">
+                <ul class="price-menu-list">
+                    <li><input id="price-btn1" class="price-list-menu-element" type="button"
+                            onclick="javascript:img.src='res/price/insertion.png', price_color(this)" value="КАБЕЛЯ">
+                    </li>
+                    <li><input id="price-btn2" class="price-list-menu-element" type="button"
+                            onclick="javascript:img.src='res/price/installation.png', price_color(this)" value="МОНТАЖ">
+                    </li>
+                    <li><input id="price-btn3" class="price-list-menu-element" type="button"
+                            onclick="javascript:img.src='res/price/welding.png', price_color(this)" value="СВАРКА"></li>
+                    <li><input id="price-btn4" class="price-list-menu-element" type="button"
+                            onclick="javascript:img.src='res/price/drilling.png', price_color(this)" value="СВЕРЛЕНИЕ">
+                    </li>
+                </ul>
+            </nav>
+            <div class="prices">
+                <img name="img" src="res/price/insertion.png" alt="insertion" class="price-pic"">
+
+            </div>
+            <div class=" price-download-button">Скачать прайс лист
+            </div>
+            
+        </section>
+    </main>
+    <script>
+        function price_color(el) {
+            document.getElementById("price-btn1").style.backgroundColor = '#073b4c';
+            document.getElementById("price-btn2").style.backgroundColor = '#073b4c';
+            document.getElementById("price-btn3").style.backgroundColor = '#073b4c';
+            document.getElementById("price-btn4").style.backgroundColor = '#073b4c';
+            el.style.backgroundColor = '#118AB2';
+        }
+        function about(el) {
+            if (document.getElementById("selection1").style.visibility != "hidden") {
+                document.getElementById("selection2").style.visibility = "visible";
+                document.getElementById("selection1").style.visibility = "hidden";
+                document.getElementById("facts").style.display = "none";
+                document.getElementById("certificates").style.display = "block";
+            } else if (document.getElementById("selection2").style.visibility != "hidden") {
+                document.getElementById("selection1").style.visibility = "visible";
+                document.getElementById("selection2").style.visibility = "hidden";
+                document.getElementById("facts").style.display = "block";
+                document.getElementById("certificates").style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>

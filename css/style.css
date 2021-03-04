@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* end css reset */
+
+/* header */
+.header {
+  background-color: #073b4c;
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px ;
+  align-items: center;
+}
+.logo {
+  flex-grow: 2;
+}
+.nav-menu {
+  flex-grow: 8;
+}
+.nav .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.menu li {
+  display: inline-block;
+  padding:1vw;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.4em;
+  padding: 0 20px;
+}
+
+/* header */
+
+/* section */
+.greetings-block {
+  background-color: #073b4c;
+}
+.cable-card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+.cable-section {
+  background-color: white;
+  padding: 0 10%;
+  margin: 30px 0 30px 0;
+  max-width: 80vw;
+  height: 52vh;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.cable-section .big-cable {
+  max-width: 50vw;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  /* При уменьшении размера страницы, картинка постепенно уменьшается,
+    затем полностью изчезает.*/
+}
+.cable-text-section {
+  margin-top:20px;
+}
+.greetings-block .title {
+  font-size: 2.5em;
+  color: white;
+  padding: 0 5%;
+}
+.title-optical-fibre > h1 {
+  font-size: 4em;
+  margin: 50px 0 0 0;
+  color:#2F2F2F, 100%;
+  font-weight: 700;
+}
+.additional-info-cable-section {
+  font-size: 1.4em;
+  color: gray;
+  font-weight: 500;
+  margin: 70px 0 0 0;
+}
+.cable-block-button {
+  font-size: 2em;
+  margin-top: 20px;
+  background-color: #118AB2;
+  text-align: center;
+  padding: 20px;
+  max-width: 550px;
+  color:white;
+  font-weight: 700;
+  
+}
+/* section */
+
+/* section */
+.about-menu {
+  background-color: #073b4c;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-menu > .about-us-caption {
+  flex-grow: 2;
+  padding: 150px 0 30px 5%;
+  font-size: 3.5em;
+  font-weight: 700;
+}
+.about-menu > .about-us-menu {
+  flex-grow: 6;
+  align-self: flex-end;
+}
+.about-menu > .about-us-menu li {
+  display: inline-block;
+  padding: 10px 60px;
+  font-size: 1.3em;
+  text-align: center;
+  height: 60px;
+}
+#selection2 {
+  visibility: hidden;
+}
+#certificates {
+  display: none;
+}
+
+.about-us-certificates {
+  height: 70vh;
+  background-color: #073b4c;
+}
+
+.selection {
+  position: relative;
+  left:0;
+  top:10px;
+ 
+}
+.info-container {
+  display: flex;
+  justify-content: center;
+}
+.info-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 60px 0;  
+  align-items: center;
+  background-color: #118AB2;
+  max-width: 75vw;
+}
+.left-block > img {
+  min-width: 144px;
+}
+.info-block .left-block {
+  border-right: white solid 4px;
+  padding:90px;
+}
+.info-block .right-block {
+
+  padding:90px;
+  margin-left:2px;
+  color:white;
+  max-width: 40vw;
+  font-size: 1em; 
+}
+.info-block .right-block > h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+.facts-title {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+  padding: 10px;
+}
+.facts {
+  margin:30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.facts-element {
+  
+  width: 33vw;
+  padding: 30px;
+  text-align: center;
+
+}
+.facts-element img {
+  display: inline-block;
+  
+}
+
+.facts-element > .caption > h2 {
+  color:#118AB2;
+  font-size: 2em;
+  font-weight: 500;
+  
+}
+.facts-element > .caption > h2 b{
+  color:#073b4c;
+}
+.facts-element > .caption > h4 {
+  font-weight: 400;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* section */
+
+
+/* section */
+.price-menu {
+  display: flex;
+  background-color: #073b4c ;
+  color:white;
+
+  justify-content: center;
+  
+}
+.price-menu-list li {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.1em;
+
+  margin:20px;
+
+}
+.price-menu-list li input {
+  padding: 20px;
+}
+.prices {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  
+}
+.price-pic {
+  
+  max-width: 90vw;
+}
+
+.price-list-menu-element {
+  text-decoration: none;
+  background-color:#073b4c ;
+  color:white;
+  border:0;
+  outline: none;
+}
+.price-download-button {
+  background-color: #073b4c;
+  color:white;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin:20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1em;
+  float:right;
+}
+
+/* section */
+
+/* hover */
+.menu li:hover{
+  background-color: #118AB2;
+}
+.about-us-menu-element:hover {
+  cursor: pointer;
+}
+.price-list-menu-element:hover {
+  cursor: pointer;
+}
+
+/* media */
+@media screen and (max-width: 1680px) {
+  .cable-section .big-cable {
+    max-width: 35vw;
+    position: absolute;
+    top: 120px;
+    left: 0;
+  }
+  /*.title-optical-fibre > h1 {
+    font-size: 3em;
+    margin-left:80px;
+  }
+  .cable-section-lines {
+    max-width: 70%;
+    margin-left:80px;
+  }
+  .additional-info-cable-section {
+    font-size: 1.2em;
+    margin: 70px 0 0 80px;
+  }
+  .cable-block-button {
+    font-size: 1.7em;
+    margin-top: 20px;
+
+    text-align: center;
+    padding: 15px;
+    max-width: 500px;
+
+    
+  }*/
+  .cable-text-section {
+    margin-left:250px;
+  }
+  .cable-section {
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 1250px){
+  .big-cable{display: none;}
+  .cable-text-section {
+    margin-left:0px;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .menu li a{
+    font-size: 1.05em ;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 890px) {
+  .title-optical-fibre > h1 {
+    font-size: 2.7em;
+    text-align: center;
+  }
+  .additional-info-cable-section {
+    text-align: center;
+  }
+  .cable-block-button {
+    max-width: 650px;
+  }
+  .about-menu > .about-us-caption {
+    padding: 150px 0 30px 3%;
+    font-size: 2.5em;
+  }
+  .about-menu > .about-us-menu li {
+    padding: 10px 20px;
+    font-size: 1.1em;
+
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav .menu {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 300px;
+  }
+  .menu li a{
+    font-size: 1.2em ;
+  }
+  .header {
+    flex-direction: row;
+    
+  }
+  .nav-menu {
+    flex-grow: 1;
+  }
+  .logo {
+    flex-grow: 9;
+  }
+  .about-menu {
+    flex-direction: column;
+  }
+  .about-menu > .about-us-menu {
+    align-self: center;
+  }
+  .info-block {
+    max-width: 85vw;
+  }
+  .facts-element {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .price-menu {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+
+  }
+  .price-menu-list li {
+    width: 300px;
+  }
+  .info-block .right-block {
+    padding:0;
+  }
+  .info-block .right-block h1 {
+    font-size:2em;
+  }
+  .info-block .right-block .info-block-caption {
+    font-size:0.8em;
+  }
+  .info-block .left-block {
+    padding:20px;
+  }
+
+}
+
+
+@media screen and (max-width: 580px) {
+  .additional-info-cable-section {
+    text-align: center;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 460px) {
+  .header {
+    flex-direction: column;
+  }
+}
+/* media */
