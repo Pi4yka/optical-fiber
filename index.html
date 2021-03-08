@@ -6,11 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/slider2.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <title>Document</title>
 </head>
 
 <body>
+    <!--MODAL-->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Заказать звонок</h2>
+        </div>
+        <div class="modal-body">
+            <div class="block-input-mail-modal">
+                <div class="mail-input-modal">
+                    <p><b>Телефон</b></p>
+                    <input></input>
+                </div>
+                <div class="mail-input-modal">
+                    <p><b>Email</b></p>
+                    <input></input>
+                </div>
+                <div class="mail-input-modal">
+                    <p><b>Как к вам обращаться</b></p>
+                    <input></input>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="button-mail-modal"> Отправить </button>
+        </div>
+        </div>
+  
+  </div>
+<!--MODAL-->
     <header class="header">
         <div class="logo">
             <img src="res/logo.png" alt="optimont logo" />
@@ -43,13 +78,13 @@
                                 закажите обратный звонок и один из<br />
                                 наших консультантов перезвонит вам
                             </h4>
-                            <div class="cable-block-button">Заказать звонок</div>
+                            <div class="cable-block-button" id="myBtn">Заказать звонок</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about-us-block" >
+        <section class="about-us-block">
             <div class="about-menu">
                 <h1 class="about-us-caption">О нас</h1>
                 <ul class="about-us-menu">
@@ -61,7 +96,7 @@
                     </li>
                 </ul>
             </div>
-            <div class = "about-us-facts" id = "facts">
+            <div class="about-us-facts" id="facts">
                 <div class="info-container">
                     <div class="info-block">
                         <div class="left-block"><img src="res/logo.png" alt="optimont logo" /></div>
@@ -134,13 +169,36 @@
                     </div>
                 </div>
             </div>
-            <div class = "about-us-certificates" id = "certificates"></div>
+            <div class="about-us-certificates" id="certificates">
+                <div class="slider2">
+                    <div class="slider__wrapper2">
+                        <div class="slider__items2">
+                            <div class="slider__item2">
+                                <img class="img-fluid2" src="res/certificates/nezuko.jpg" alt="c1">
+                            </div>
+                            <div class="slider__item2">
+                                <img class="img-fluid2" src="res/certificates/nezuko2.jpg" alt="c2">
+                            </div>
+                            <div class="slider__item2">
+                                <img class="img-fluid2" src="res/certificates/nezuko.jpg" alt="c3">
+                            </div>
+                            <div class="slider__item2">
+                                <img class="img-fluid2" src="res/certificates/nezuko2.jpg" alt="c4">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="slider__control2 slider__control_prev2" href="#" role="button"></a>
+                    <a class="slider__control2 slider__control_next2" href="#" role="button"></a>
+                </div>
+
+
+            </div>
         </section>
         <section class="price-list">
             <nav class="price-menu">
                 <ul class="price-menu-list">
                     <li><input id="price-btn1" class="price-list-menu-element" type="button"
-                            onclick="javascript:img.src='res/price/insertion.png', price_color(this)" value="КАБЕЛЯ">
+                            onclick="javascript:img.src='res/price/insertion.png', price_color(this)" value="ПРОКЛАДКА">
                     </li>
                     <li><input id="price-btn2" class="price-list-menu-element" type="button"
                             onclick="javascript:img.src='res/price/installation.png', price_color(this)" value="МОНТАЖ">
@@ -150,23 +208,135 @@
                     <li><input id="price-btn4" class="price-list-menu-element" type="button"
                             onclick="javascript:img.src='res/price/drilling.png', price_color(this)" value="СВЕРЛЕНИЕ">
                     </li>
+                    <li><input id="price-btn5" class="price-list-menu-element" type="button"
+                        onclick="javascript:img.src='res/price/testing.png', price_color(this)" value="ТЕСТИРОВАНИЕ">
+                </li>
                 </ul>
             </nav>
             <div class="prices">
                 <img name="img" src="res/price/insertion.png" alt="insertion" class="price-pic"">
-
-            </div>
-            <div class=" price-download-button">Скачать прайс лист
+                <input type="button" class="price-download-button" value="Скачать прайс лист">
             </div>
             
+            
+
         </section>
+
+        <section class="carousel">
+            <div class="carousel-title">Как мы работаем</div>
+            <p>Вся работа компании полностью соответствует действующему законодательству, а также подтверждена наличием
+                лицензий и Сертификатов.
+                Высокий профессионализм каждого сотрудника, целевая направленность на положительный результат для
+                клиента,
+                а также наличие многолетнего опыта и квалификации являются основными принципами работы «Zasip».</p>
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__items">
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image1.png" alt="c1">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image1.png" alt="c2">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image1.png" alt="c3">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image1.png" alt="c4">
+                        </div>
+                    </div>
+                </div>
+                <a class="slider__control slider__control_prev" href="#" role="button"></a>
+                <a class="slider__control slider__control_next" href="#" role="button"></a>
+            </div>
+            <p>
+                Наши сотрудники оперативно реагируют на все заявки от клиентов,
+                предоставляя своевременные и высококачественные работы.
+                Более того, мы знаем, что одним из основных составляющих успешной
+                деловой репутации любой компании является оптимальное сочетание качества и
+                стоимости. На все услуги у нас существует гибкая система ценообразования,
+                которая располагает к взаимовыгодному и долгосрочному сотрудничеству.
+            </p>
+        </section>
+
+        <section class="mail-to">
+            <div class="mail-title">
+                Запись на консультацию
+            </div>
+            <div class="block-ladder">
+                <span id="first"></span>
+                <span id="second"></span>
+                <span id="third"></span>
+            </div>
+            <div class="block-mail">
+                <div class="block-input-mail">
+                    <div class="mail-input">
+                        <p><b>Телефон</b></p>
+                        <input></input>
+                    </div>
+                    <div class="mail-input">
+                        <p><b>Email</b></p>
+                        <input></input>
+                    </div>
+                    <div class="mail-input">
+                        <p><b>Как к вам обращаться</b></p>
+                        <input></input>
+                    </div>
+                    <button id="button-mail">
+                        <div class="button">Отправить</div>
+                    </button>
+                    
+                </div>
+                <div class="block-mail-img">
+                    <img src="res/ethernet.png">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="block-map">
+            <div class="main-contacts">
+                <div class="map-title">
+                    Наши контакты
+                </div>
+                <div class="block-contacts"> 
+                    <p id="title-contact"><b>Телефон</b></p>
+                    <p id="sub-contact"><b>+7 (962) 364-62-05</b></p>
+                    <p id="title-contact"><b>Email</b></p>
+                    <p id="sub-contact"><b>a_zasip@mail.ru</b></p>
+                </div>
+            </div>
+            <div class="map-yandex">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0be74a9e021ed7666d5f110ded2e2135a3737b0fb132eee8c4d48803f2a55439&amp;source=constructor" width="100%" height="500vw" frameborder="0"></iframe>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <nav class="footer-nav">
+                <ul class="footer-menu">
+                    <li class="footer-menu-element">О нас</li>
+                    <li class="footer-menu-element">Цены</li>
+                    <li class="footer-menu-element">Акции</li>
+                    <li class="footer-menu-element">Контакты</li>
+                    <li class="footer-menu-element">Карты</li>
+                </ul>
+            </nav>
+            <hr>
+            <p>
+                Copyright @2021 «Zasip»
+            </p>
+        </footer>
     </main>
+    
     <script>
+
         function price_color(el) {
             document.getElementById("price-btn1").style.backgroundColor = '#073b4c';
             document.getElementById("price-btn2").style.backgroundColor = '#073b4c';
             document.getElementById("price-btn3").style.backgroundColor = '#073b4c';
             document.getElementById("price-btn4").style.backgroundColor = '#073b4c';
+            document.getElementById("price-btn5").style.backgroundColor = '#073b4c';
             el.style.backgroundColor = '#118AB2';
         }
         function about(el) {
@@ -182,7 +352,11 @@
                 document.getElementById("certificates").style.display = "none";
             }
         }
+
     </script>
+    <script src="js/slider.js"></script>
+    <script src="js/slider2.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
