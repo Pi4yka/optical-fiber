@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+/* Плавный скролл */
+html {
+  scroll-behavior: smooth;
+}
 /* Указываем box sizing */
 
 *,
@@ -525,8 +530,15 @@ select {
 .footer-menu-element{
   display: inline-block;
   padding:1vw;
-
 }
+.footer-menu-element > a{
+  text-decoration: none;
+  background-color:#073b4c ;
+  color:white;
+  border:0;
+  outline: none;
+}
+
 .footer > hr{
   width:40%
 }
@@ -534,7 +546,38 @@ select {
   padding: 20px;
 }
 /* footer */
-
+/* Кнопка возврата к меню*/
+.button-up {   
+  display: inline-block;   
+  background-color: #118AB2;   
+  width: 50px;   
+  height: 50px;   
+  text-align: center;   
+  border-radius: 4px;   
+  margin: 10px;   
+  position: fixed;   
+  bottom: 20px;   
+  right: 20px;   
+  transition: background-color .3s;   
+  z-index: 1000; 
+  text-decoration: none;
+} 
+.button-up:hover {   
+  cursor: pointer;   
+  background-color: #333; 
+} 
+.button-up:active {   
+  background-color: #555; 
+}
+.button-up::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff; 
+} 
 /* hover */
 .menu li:hover{
   background-color: #118AB2;

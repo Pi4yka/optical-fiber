@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--
+Сайт разработан командой TinyGeeksWeb.
+По всем вопросам: godfri423@ro.ru
+-->
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,10 +12,19 @@
     <link rel="stylesheet" href="css/slider.css" />
     <link rel="stylesheet" href="css/slider2.css" />
     <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
+    <!--Button-up-->
+    
+        
+            <a class="button-up"href="#main-page"></a>
+        
+    
+
+    <!--Button-up-->
     <!--MODAL-->
     <div id="myModal" class="modal">
 
@@ -46,22 +58,21 @@
   
   </div>
 <!--MODAL-->
-    <header class="header">
+    <header class="header" id="main-page">
         <div class="logo">
             <img src="res/logo.png" alt="optimont logo" />
         </div>
         <nav class="nav nav-menu">
             <ul class="menu">
-                <li class="menu-element"><a href="">О нас</a></li>
-                <li class="menu-element"><a href="">Наша продукция</a></li>
-                <li class="menu-element"><a href="">Акции</a></li>
-                <li class="menu-element"><a href="">Как мы работаем</a></li>
-                <li class="menu-element"><a href="">Контакты</a></li>
+                <li class="menu-element"><a href="#about-us">О нас</a></li>
+                <li class="menu-element"><a href="#prices">Цены</a></li>
+                <li class="menu-element"><a href="#how-we-work">Как мы работаем</a></li>
+                <li class="menu-element"><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="greetings-block">
+        <section class="greetings-block" >
             <h1 class="title">
                 Мы осуществляем монтаж <br />
                 по всей территории Москвы и Московской области
@@ -84,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-us-block">
+        <section class="about-us-block" id="about-us">
             <div class="about-menu">
                 <h1 class="about-us-caption">О нас</h1>
                 <ul class="about-us-menu">
@@ -194,7 +205,7 @@
 
             </div>
         </section>
-        <section class="price-list">
+        <section class="price-list" id="prices">
             <nav class="price-menu">
                 <ul class="price-menu-list">
                     <li><input id="price-btn1" class="price-list-menu-element" type="button"
@@ -222,7 +233,7 @@
 
         </section>
 
-        <section class="carousel">
+        <section class="carousel" id="how-we-work">
             <div class="carousel-title">Как мы работаем</div>
             <p>Вся работа компании полностью соответствует действующему законодательству, а также подтверждена наличием
                 лицензий и Сертификатов.
@@ -236,13 +247,22 @@
                             <img class="img-fluid" src="res/img/image1.png" alt="c1">
                         </div>
                         <div class="slider__item">
-                            <img class="img-fluid" src="res/img/image1.png" alt="c2">
+                            <img class="img-fluid" src="res/img/image2.png" alt="c2">
                         </div>
                         <div class="slider__item">
-                            <img class="img-fluid" src="res/img/image1.png" alt="c3">
+                            <img class="img-fluid" src="res/img/image3.png" alt="c3">
                         </div>
                         <div class="slider__item">
-                            <img class="img-fluid" src="res/img/image1.png" alt="c4">
+                            <img class="img-fluid" src="res/img/image4.png" alt="c4">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image5.png" alt="c5">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image6.png" alt="c6">
+                        </div>
+                        <div class="slider__item">
+                            <img class="img-fluid" src="res/img/image7.png" alt="c7">
                         </div>
                     </div>
                 </div>
@@ -294,7 +314,7 @@
 
         </section>
 
-        <section class="block-map">
+        <section class="block-map" id="contacts">
             <div class="main-contacts">
                 <div class="map-title">
                     Наши контакты
@@ -315,16 +335,17 @@
         <footer class="footer">
             <nav class="footer-nav">
                 <ul class="footer-menu">
-                    <li class="footer-menu-element">О нас</li>
-                    <li class="footer-menu-element">Цены</li>
-                    <li class="footer-menu-element">Акции</li>
-                    <li class="footer-menu-element">Контакты</li>
-                    <li class="footer-menu-element">Карты</li>
+                    <li class="footer-menu-element"><a href="#about-us">О нас</a></li>
+                    <li class="footer-menu-element"><a href="#prices">Цены</a></li>
+                    <li class="footer-menu-element"><a href="#how-we-work">Как мы работаем</a></li>
+                    <li class="footer-menu-element"><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <hr>
             <p>
-                Copyright @2021 «Zasip»
+                <script> 
+                    document.write("Copyright &copy; "+ new Date().getFullYear()+ " «Zasip». All rights reserved.");
+                </script>
             </p>
         </footer>
     </main>
@@ -352,11 +373,12 @@
                 document.getElementById("certificates").style.display = "none";
             }
         }
-
+        
     </script>
     <script src="js/slider.js"></script>
     <script src="js/slider2.js"></script>
     <script src="js/modal.js"></script>
+
 </body>
 
 </html>
