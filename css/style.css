@@ -650,6 +650,13 @@ select {
   #button-mail{
     left: 1em;
   }
+  .price-pic {
+    max-width: 90vw;
+  }
+  .price-menu-list li {
+    margin:5px;
+  }
+
 }
 @media screen and (max-width: 890px) {
   .title-optical-fibre > h1 {
@@ -704,8 +711,6 @@ select {
   .facts-element {
     width: 60vw;
   }
-}
-@media screen and (max-width: 700px) {
   .price-menu {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -714,8 +719,11 @@ select {
 
   }
   .price-menu-list li {
-    width: 300px;
+    width: 370px;
   }
+}
+@media screen and (max-width: 700px) {
+
   .info-block .right-block {
     padding:0;
   }
@@ -755,6 +763,23 @@ select {
   .block-map{
     flex-direction: column;
   }
+  .cable-block-button {
+    max-width: 600px;
+    font-size: 1em;
+  }
+  .cable-section {
+    max-width: 100vw;
+  }
+  .facts-element > .caption > h2 {
+    font-size: 1.4em;
+  }
+  .price-download-button {
+    font-size: 1em;
+    padding: 10px;
+    width: 250px;
+    align-self: center;
+    margin-top:40px;
+  }
   
 }
 @media screen and (max-width: 380px){
@@ -763,6 +788,9 @@ select {
   }
   .block-contacts{
     padding-left: 50px;
+  }
+  .price-menu-list li {
+    width: 300px;
   }
 }
 /* media */
