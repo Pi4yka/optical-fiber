@@ -36,26 +36,28 @@
         </div>
         <div class="modal-body">
             <div class="block-input-mail-modal">
-                <div class="mail-input-modal">
-                    <p><b>Телефон</b></p>
-                    <input></input>
-                </div>
-                <div class="mail-input-modal">
-                    <p><b>Email</b></p>
-                    <input></input>
-                </div>
-                <div class="mail-input-modal">
-                    <p><b>Как к вам обращаться</b></p>
-                    <input></input>
-                </div>
+                <form>
+                    <div class="mail-input-modal">
+                        <p><b>Телефон</b></p>
+                        <input type="phone" name="phone" placeholder="Телефон"></input>
+                    </div>
+                    <div class="mail-input-modal">
+                        <p><b>Email</b></p>
+                        <input type="email" name="email" placeholder="Email"></input>
+                    </div>
+                    <div class="mail-input-modal">
+                        <p><b>Как к вам обращаться</b></p>
+                        <input type="text" name="name" placeholder="Имя"></input>
+                    </div>
                 
             </div>
         </div>
         <div class="modal-footer">
-            <button id="button-mail-modal"> Отправить </button>
+            <button id="button-mail-modal" type="submit"> Отправить </button>
         </div>
+        </form>
         </div>
-  
+
   </div>
 <!--MODAL-->
     <header class="header" id="main-page">
@@ -290,28 +292,28 @@
             </div>
             <div class="block-mail">
                 <div class="block-input-mail">
-                    <div class="mail-input">
-                        <p><b>Телефон</b></p>
-                        <input></input>
-                    </div>
-                    <div class="mail-input">
-                        <p><b>Email</b></p>
-                        <input></input>
-                    </div>
-                    <div class="mail-input">
-                        <p><b>Как к вам обращаться</b></p>
-                        <input></input>
-                    </div>
-                    <button id="button-mail">
-                        <div class="button">Отправить</div>
-                    </button>
-                    
+                        <form>
+                            <div class="mail-input">
+                                <p><b>Телефон</b></p>
+                                <input type="phone" name="phone" placeholder="Телефон"></input>
+                            </div>
+                            <div class="mail-input">
+                                <p><b>Email</b></p>
+                                <input type="email" name="email" placeholder="Email"></input>
+                            </div>
+                            <div class="mail-input">
+                                <p><b>Как к вам обращаться</b></p>
+                                <input type="text" name="name" placeholder="Имя"></input>
+                            </div>
+                            <button id="button-mail">
+                                <div class="button" type="submit">Отправить</div>
+                            </button>
+                        </form>
                 </div>
                 <div class="block-mail-img">
                     <img src="res/ethernet.png">
                 </div>
             </div>
-
         </section>
 
         <section class="block-map" id="contacts">
@@ -349,7 +351,8 @@
             </p>
         </footer>
     </main>
-    
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
 
         function price_color(el) {
@@ -374,6 +377,27 @@
             }
         }
         
+        
+    </script>
+    <script>
+        $(document).ready(function() {
+            //E-mail Ajax Send
+            $("form").submit(function() { //Change
+                var th = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: "php/send.php", //Change
+                    data: th.serialize()
+                }).done(function() {
+                    alert("Ваше письмо отправлено!");
+                    setTimeout(function() {
+                        // Done Functions
+                        th.trigger("reset");
+                    }, 1000);
+                });
+                return false;
+            });
+        });
     </script>
     <script src="js/slider.js"></script>
     <script src="js/slider2.js"></script>

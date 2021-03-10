@@ -73,6 +73,7 @@ button,
 textarea,
 select {
   font: inherit;
+  outline-style: none;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
